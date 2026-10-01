@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ecommerce
+  name: myshop
 spec:
   selector:
-    app: ecommerce
+    app: myshop
   ports:
     - port: 80
       targetPort: 3000
