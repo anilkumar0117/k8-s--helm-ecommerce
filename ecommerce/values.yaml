@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: 520819077072.dkr.ecr.ap-south-1.amazonaws.com/anil-docker
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+containerPort: 3000
+
+ingress:
+  enabled: true
+  className: alb
+  host: myshop.anildevops.space
+  certificateArn: arn:aws:acm:ap-south-1:520819077072:certificate/7f145ef0-e4a0-4bdd-9ca5-8242687b4ac1
