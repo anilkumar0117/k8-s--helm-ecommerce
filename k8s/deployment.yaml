@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce
+  name: myshop
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ecommerce
+      app: myshop
   template:
     metadata:
       labels:
-        app: ecommerce
+        app: myshop
     spec:
       containers:
-        - name: shop
+        - name: myshop
           image: 520819077072.dkr.ecr.ap-south-1.amazonaws.com/anil-docker
           ports:
             - containerPort: 3000
