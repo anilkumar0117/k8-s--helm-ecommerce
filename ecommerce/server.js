@@ -38,5 +38,5 @@ app.post("/api/orders", (req, res) => {
   res.status(201).json({ id: order.id, total });
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (_req, res) => res.sendFile(path.join(__dirname, "index.html")));
 app.listen(process.env.PORT || 3000, () => console.log("ecommerce shop running"));
